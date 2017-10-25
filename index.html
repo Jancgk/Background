@@ -22,7 +22,7 @@
         });
     </script>
 </head>
-<body class="home blog" ondragstart="return false">
+<body class="home blog" ondragstart="return false" onload="time()">
 <section class="hidden-xs">
     <ul class="cb-slideshow">
         <li><span class="li_img1"></span></li>
@@ -57,25 +57,40 @@
         items[i].style.left = (50 - 35 * Math.cos(-0.5 * Math.PI - 2 * (1 / l) * i * Math.PI)).toFixed(4) + "%";
         items[i].style.top = (50 + 35 * Math.sin(-0.5 * Math.PI - 2 * (1 / l) * i * Math.PI)).toFixed(4) + "%"
     }
+
+    function time() {
+        t_div = document.getElementById('showtime');
+        var now = new Date()
+        t_div.innerHTML = now.getFullYear()
+            + "-" + (now.getMonth() + 1) + "-" + now.getDate()
+            + " " + now.getHours() + ":" + now.getMinutes()
+            + ":" + now.getSeconds();
+        setTimeout(time, 1000);
+    }
 </script>
 <!--<div id="overlay" style="opacity: 1; cursor: pointer;"></div>-->
 <div id="overlay" class="magnify">
-    <div class="large" ></div>
+    <div class="large"></div>
     <img class="small" src="https://beats0.github.io/www.mygalgame.com/images/rpic.png" width="1920">
 </div>
 <div class="container">
     <div class="grid">
         <div id="zan-bodyer">
             <div class="container">
-                <div class="row">
+                <div class="row panel panel-info">
+                    <div class="panel-heading">
+                        <div id="showtime" class="text-center">Time</div>
+                        <h4 class="panel-title text-center">
+                            <a data-toggle="collapse" data-parent="#accordion"
+                               href="#collapseexample">
+                                show
+                            </a>
+                        </h4>
+                    </div>
 
-                    <div class="col-md-12">
-                        <div id="article-list">
-                            <div class="article well clearfix mybody3 aos-init aos-animate" aos="flip-up"><i
-                                    class="fa fa-bookmark article-stick visible-md visible-lg"></i>
-                                <div class="data-article hidden-xs"><span class="month">10月</span> <span
-                                        class="day">20</span>
-                                </div> <!-- 大型设备文章属性 -->
+                    <div id="collapseexample" class="panel-collapse collapse col-md-12">
+                        <div id="article-list panel-body">
+                            <div class="article well clearfix mybody3 aos-init aos-animate" aos="flip-up">
                                 <section class="hidden-xs">
                                     <div class="title-article"><h1><a
                                             href="http://www.xiami.com/album/537161?spm=a1z1s.3061781.6856533.7.JPbanO"
@@ -127,15 +142,15 @@
                                                             {
                                                                 title: 'ODDS&ENDS',
                                                                 author: 'ryo;初音ミク',
-                                                                url: 'http://m10.music.126.net/20171024224220/16edd10961ed6769d548c1702677c730/ymusic/f8b6/3f6e/5f81/c384f03bf2719cdb4c65011df280698d.mp3',
+                                                                url: 'http://m320.xiami.net/516/96516/537161/1771257374_3640897_h.mp3',
                                                                 pic: 'https://ws1.sinaimg.cn/large/006nOlwNgy1fkp5wvf251j30dw0dsgnh.jpg'
 
                                                             },
                                                             {
                                                                 title: 'WORLD\'S END UMBRELLA',
                                                                 author: 'ハチ;初音ミク',
-                                                                url: 'http://m10.music.126.net/20171024203744/1356c82421ffa52a4481c8c47f2a1b1b/ymusic/0868/f43d/340d/3c8b1470d8c3fc5c8ce0a3028213118b.mp3',
-                                                                pic: 'http://p1.music.126.net/Zi1_9VHOOspsB1A-aeob3w==/6061607604339141.jpg'
+                                                                url: 'http://m320.xiami.net/407/87407/412209/1769880696_1496385136096.mp3',
+                                                                pic: 'https://p1.music.126.net/Zi1_9VHOOspsB1A-aeob3w==/6061607604339141.jpg'
                                                             }
                                                         ]
                                                     });
@@ -144,7 +159,8 @@
                                         </div>
 
 
-                                        <p></p></div>
+                                        <p></p>
+                                    </div>
                                 </section> <!-- 大型设备文章属性结束 --> <!-- 小型设备文章属性 -->
                                 <section class="visible-xs">
                                     <div class="title-article">
@@ -198,15 +214,15 @@
                                                             {
                                                                 title: 'ODDS&ENDS',
                                                                 author: 'ryo;初音ミク',
-                                                                url: 'http://m10.music.126.net/20171024224220/16edd10961ed6769d548c1702677c730/ymusic/f8b6/3f6e/5f81/c384f03bf2719cdb4c65011df280698d.mp3',
+                                                                url: 'http://m320.xiami.net/516/96516/537161/1771257374_3640897_h.mp3',
                                                                 pic: 'https://ws1.sinaimg.cn/large/006nOlwNgy1fkp5wvf251j30dw0dsgnh.jpg'
 
                                                             },
                                                             {
                                                                 title: 'WORLD\'S END UMBRELLA',
                                                                 author: 'ハチ;初音ミク',
-                                                                url: 'http://m10.music.126.net/20171024203744/1356c82421ffa52a4481c8c47f2a1b1b/ymusic/0868/f43d/340d/3c8b1470d8c3fc5c8ce0a3028213118b.mp3',
-                                                                pic: 'http://p1.music.126.net/Zi1_9VHOOspsB1A-aeob3w==/6061607604339141.jpg'
+                                                                url: 'http://m320.xiami.net/407/87407/412209/1769880696_1496385136096.mp3',
+                                                                pic: 'https://p1.music.126.net/Zi1_9VHOOspsB1A-aeob3w==/6061607604339141.jpg'
                                                             }
                                                         ]
                                                     });
