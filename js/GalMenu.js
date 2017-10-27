@@ -116,4 +116,6 @@ String.prototype.pF = function() {
 };
 Number.prototype.pF = function() {
     return parseFloat(this)
+
+
 };

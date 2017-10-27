@@ -10,9 +10,9 @@
     <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/myblog.css">
     <link rel="stylesheet" href="css/fade.css">
-    <link rel="stylesheet" href="css/myblog.css">
     <script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
     <script src="js/GalMenu.js"></script>
+    <script src="js/GalH.js"></script>
     <script src="https://cdn.bootcss.com/aplayer/1.6.0/APlayer.min.js"></script>
     <script type="text/javascript" src="https://beats0.github.io/www.mygalgame.com/js/bootstrap=1.0.1.js"></script>
     <script type="text/javascript">
@@ -58,7 +58,6 @@
         items[i].style.left = (50 - 35 * Math.cos(-0.5 * Math.PI - 2 * (1 / l) * i * Math.PI)).toFixed(4) + "%";
         items[i].style.top = (50 + 35 * Math.sin(-0.5 * Math.PI - 2 * (1 / l) * i * Math.PI)).toFixed(4) + "%"
     }
-
     function time() {
         t_div = document.getElementById('showtime');
         var now = new Date()
@@ -69,9 +68,8 @@
         setTimeout(time, 1000);
     }
 </script>
-<!--<div id="overlay" style="opacity: 1; cursor: pointer;"></div>-->
 <div id="overlay" class="magnify">
-    <div class="large"></div>
+    <div class="large h_img"></div>
     <img class="small" src="https://beats0.github.io/www.mygalgame.com/images/rpic.png" width="1920">
 </div>
 <div class="container">

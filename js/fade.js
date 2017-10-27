@@ -204,16 +204,24 @@ $(document).ready(function(){
     post_thumbnail_link[198] = "https://ws1.sinaimg.cn/large/006nOlwNgy1fkvjn7ptmfj31hc0xmtfr.jpg";
     post_thumbnail_link[199] = "https://ws1.sinaimg.cn/large/006nOlwNgy1fkvjbl5dy0j31hc0xsdpw.jpg";
 
+    var post_thumbnail_h_link = new Array();
+    post_thumbnail_h_link[0] = "https://ws1.sinaimg.cn/large/005ODKsIgw1fau9ijyaidj31hc0we79e.jpg";
+    post_thumbnail_h_link[1] = "https://ws1.sinaimg.cn/large/005ODKsIgw1fauqa05nd3j31hc0uin3q.jpg";
+    post_thumbnail_h_link[2] = "https://ws1.sinaimg.cn/large/005ODKsIgw1faxmyfqraij31hc0x646t.jpg";
+
     i = Math.floor(Math.random()*(Math.floor(post_thumbnail_link.length)));
     j = Math.floor(Math.random()*(Math.floor(post_thumbnail_link.length)));
     k = Math.floor(Math.random()*(Math.floor(post_thumbnail_link.length)));
     l = Math.floor(Math.random()*(Math.floor(post_thumbnail_link.length)));
     m = Math.floor(Math.random()*(Math.floor(post_thumbnail_link.length)));
     n = Math.floor(Math.random()*(Math.floor(post_thumbnail_link.length)));
+    h = Math.floor(Math.random()*(Math.floor(post_thumbnail_h_link.length)));
+
     $(".li_img1").css('backgroundImage','url(' + post_thumbnail_link[i] + ')');
     $(".li_img2").css('backgroundImage','url(' + post_thumbnail_link[j] + ')');
     $(".li_img3").css('backgroundImage','url(' + post_thumbnail_link[k] + ')');
     $(".li_img4").css('backgroundImage','url(' + post_thumbnail_link[l] + ')');
     $(".li_img5").css('backgroundImage','url(' + post_thumbnail_link[m] + ')');
     $(".li_img6").css('backgroundImage','url(' + post_thumbnail_link[n] + ')');
+    $(".h_img").css('background','url(' + post_thumbnail_h_link[h] + ')');
 });
