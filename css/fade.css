@@ -434,3 +434,6 @@
     max-height: initial;
     opacity: 0;
 }
+#zan-bodyer {
+    padding: 5px 0;!important;
+}
