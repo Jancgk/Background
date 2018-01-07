@@ -2,16 +2,16 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Galgame Forever</title>
+    <title>Mygalgame backup</title>
     <link rel="shortcut icon" href="https://jancgk.github.io/Background/favicon.ico">
     <link rel="stylesheet" href="https://beats0.github.io/www.mygalgame.com/css/style.css">
     <link rel="stylesheet" href="https://beats0.github.io/www.mygalgame.com/css/myblog.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/fade.css">
     <script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
     <script src="js/GalMenu.js"></script>
     <script src="js/GalH.js"></script>
     <script src="https://cdn.bootcss.com/aplayer/1.6.0/APlayer.min.js"></script>
-
 </head>
 <body class="home blog logged-in" ondragstart="return false" aos-easing="ease-out-back" aos-duration="1000"
       aos-delay="0">
@@ -29,22 +29,22 @@
     <div class="circle" id="gal">
         <div class="ring">
             <a href="https://beats0.github.io/www.mygalgame.com" title="首页" class="menuItem">首页</a>
-            <a href="https://beats0.github.io/www.mygalgame.com/page/2/" target="_blank" title=""
+            <a href="https://www.mygalgame.com/page/1/" target="_blank" title=""
                class="menuItem">下一页</a>
             <a href="https://beats0.github.io/www.mygalgame.com/message.html" target="_blank" title="" class="menuItem">留言版</a>
             <a href="https://beats0.github.io/www.mygalgame.com/?orderby=views" target="_blank" title=""
                class="menuItem">热门排行</a>
             <a href="https://beats0.github.io/www.mygalgame.com/gengxinrizhi.html" target="_blank" title=""
                class="menuItem">更新日志</a>
-            <a href="https://beats0.github.io/www.mygalgame.com/" target="_blank" title="" class="menuItem">上一页</a>
+            <a href="https://beats0.github.io/www.mygalgame.com/page/N1/" target="_blank" title=""
+               class="menuItem">上一页</a>
         </div>
         <audio id="audio" src="https://www.hacg.me/mp3/onj001.mp3"></audio>
     </div>
 </div>
 <script type="text/javascript">
     var items = document.querySelectorAll('.menuItem');
-    for (var i = 0,
-             l = items.length; i < l; i++) {
+    for (var i = 0, l = items.length; i < l; i++) {
         items[i].style.left = (50 - 35 * Math.cos(-0.5 * Math.PI - 2 * (1 / l) * i * Math.PI)).toFixed(4) + "%";
         items[i].style.top = (50 + 35 * Math.sin(-0.5 * Math.PI - 2 * (1 / l) * i * Math.PI)).toFixed(4) + "%"
     }
@@ -84,7 +84,42 @@
         </div>
     </div>
 </div>
-<footer id="zan-footer"></footer>
+<footer id="zan-footer">
+    <div class="row">
+        <div class="zan-footer-col-md-4"><a href="https://beats0.github.io/www.mygalgame.com/page/N1/"
+                                            target="_blank"><i class="fa fa-angle-double-left fa-lg"></i>2018<span
+                class="hidden-xs">(New Page)</span></a></div>
+        <div class="zan-footer-col-md-4"><a href="https://www.mygalgame.com/" target="_blank"><i
+                class="fa fa-home fa-lg"></i><span class="hidden-xs">Mygalgame</span></a></div>
+        <div class="zan-footer-col-md-4"><a href="https://beats0.github.io/www.mygalgame.com/" target="_blank"><i
+                class="fa fa-link fa-lg"></i><span class="hidden-xs">Mygalgame backup</span></a></div>
+        <div class="zan-footer-col-md-4"><a href="https://www.mygalgame.com/page/1/" target="_blank">2017<span
+                class="hidden-xs">(Old Page)</span><i class="fa fa-angle-double-right fa-lg"></i></a></div>
+    </div>
+    <div class="footer-page-link col-md-2 pull-left">
+        <div class="zan-page clearfix">
+            <ul class="pagination pagination-zan">
+                <li><a href="https://beats0.github.io/www.mygalgame.com/page/N1/">1</a></li>
+                <li><a href="https://beats0.github.io/www.mygalgame.com/page/N2/">2</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-page-link col-md-2">
+        <div class="zan-page clearfix">
+            <ul class="pagination pagination-zan">
+                <li><a href="https://www.mygalgame.com/page/1/">1</a></li>
+                <li><a href="https://www.mygalgame.com/page/2/">2</a></li>
+                <li><a href="https://www.mygalgame.com/page/3/">3</a></li>
+                <li><a href="https://www.mygalgame.com/page/4/">4</a></li>
+                <li><a href="https://www.mygalgame.com/page/5/">5</a></li>
+                <li><a href="https://www.mygalgame.com/page/6/">6</a></li>
+                <li><span>...</span></li>
+                <li><a href="https://www.mygalgame.com/page/72/">72</a></li>
+                <li><a href="https://www.mygalgame.com/page/2/">»</a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
 <script type="text/javascript" src="js/fade.js"></script>
 <script>console.log("%c", "padding:150px 300px;line-height:500px;background:url('https://ws1.sinaimg.cn/large/006nOlwNgy1fktngl8rdnj3090090myp.jpg') no-repeat;");</script>
 <script>
@@ -95,7 +130,7 @@
         /**兼容问题？emmmmm**/
         setTimeout(function () {
             $(".aplayer-list").addClass("aplayer-list-hide");
-            $("li").css("text-align","left")
+            $("li").css("text-align", "left")
         }, 3000);
         $('.hero__scroll').on('click', function (e) {
             $('html, body').animate({
@@ -103,7 +138,6 @@
             }, 1200);
         });
     });
-
 </script>
 </body>
 </html>
